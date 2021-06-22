@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const ProductModel = require("../models/ProductModel.js");
+const ProductModel = require("../models/productModel.js");
 //where a middleware decl would go
 //const authMiddleware = require("../middleware/Authentication.js");
 
