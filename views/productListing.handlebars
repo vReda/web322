@@ -1,0 +1,21 @@
+<section>
+    <h1>All property listings</h1>
+
+    <div id="featured-section">
+        {{#each products}}
+                <div>
+                    <a href="/product/{{this.id}}">
+                        <img src="{{this.imgS}}">
+                        <div>
+                            <a href="/product/{{this.id}}">{{this.title}}</a> <br>
+                            <div>
+                                Location: {{this.location}} <br>
+                                Price: ${{this.price}}/night <br>  
+                            </div>
+                        </div>  
+                    </a> 
+                </div>
+        {{/each}}
+    </div>
+    
+</section>

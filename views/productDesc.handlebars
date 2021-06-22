@@ -1,0 +1,23 @@
+<section id="description-section">
+    <div id="image-section">
+        <img src="{{product.imgL}}" id="imgL">
+        <img src="{{product.imgS}}" id="imgM">
+        <img src="{{product.imgS}}" id="imgM">
+        <img src="{{product.imgS}}" id="imgS">
+    </div>
+    <hr>
+    <div id="description-details">
+        <div>
+            <h3><img src="/img/map.png" id="symbol">{{product.location}}</h3>
+            <h2>{{product.title}}</h2>
+            {{product.rating}}/5 Stars<br>
+        </div>
+        <div>Description: {{product.description}} <br>
+            Type: {{product.Type}} <br>
+        </div>
+        <div>
+            <h3>${{product.price}}/night</h3>
+            <button id="book-button">Book Now!</button>
+        </div>
+    </div>
+</section>

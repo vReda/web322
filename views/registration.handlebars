@@ -1,0 +1,50 @@
+<!--
+    When making a form:
+
+    1. Make sure it has an action attribute ex POST
+    2. Make sure the button is a submit type
+        <button type="submit">Create Account</button>
+    3. Make sure that ALL form controls/textboxes etc have a name attribute with a value... no name no info!!
+    4. Need a route for the info to be posted to
+
+-->
+
+<section id="registration-container">
+    <img src="\img\register.jpg" class="sidePic">
+    <form action="/user/register" method="POST">
+        <h1>Register</h1>
+        {{#each errors}}
+            <div id="errors">
+                {{this}}
+            </div>
+        {{/each}}
+        <div class="form-controller">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName">
+        </div>
+
+        <div class="form-controller">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName">
+        </div>
+
+        <div class="form-controller">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+        </div>
+
+        <div class="form-controller">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <div class="form-controller">
+            <label for="password">Confirm Password</label>
+            <input type="password" id="password" name="password2">
+        </div>
+
+        <div class="button-controller">
+            <button type="submit">Sign Up</button> 
+        </div>
+    </form>
+</section>

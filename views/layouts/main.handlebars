@@ -1,0 +1,74 @@
+<!--anything common goes in this file.  Every page we want header etc. The thing that will be changed is what goes in main, signified by When the page loads ex. home.handlebars, it will go into-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{title}}</title> <!--place for injected objects, this one is named title and is called in the server.js
+                                double braces are always for injected data-->
+    <link rel="stylesheet" href="/css/style.css"> <!--the server already knows to go to the public page from the command in server, this slash is IMPORTANT!
+                                                    without the slash the server won't know where to go after that-->
+    <link rel="stylesheet" href="/css/carousel.css">
+    <script defer src="/js/app.js"></script>
+    <script src="/js/carousel.js"></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="/img/TravelYoung3.png" height="100" id="logo">
+        </div>  
+        <div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="/">home</a></li>
+                    <li><a href="/product/listing">all properties</a></li>
+                    <li><a href="/user/registration">register</a></li>
+                    <li><a href="/user/login">login</a></li>
+                    <li><a href="/user/dashboard">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="social">
+            <img src="\img\logos1.png" height="60" id="social">
+        </div>
+
+    </header>
+    
+
+    <main>
+        <div id="currentPage">
+            {{title}}
+        </div>
+
+         {{{body}}} <!--when we load a template file, this is where that goes-->
+
+    </main>
+
+    <footer>
+            <div>
+                <img src="\img\logos1.png" height="60" id="logo">
+            </div>
+            <div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="/">home</a></li>
+                    <li><a href="/product/listing">all properties</a></li>
+                    <li><a href="/user/registration">register</a></li>
+                    <li><a href="/user/login">login</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <p>A website by Vanessa Reda.
+               For questions or concerns: vreda@myseneca.ca    
+            </p>
+        </div>
+    </footer>
+   
+</body>
+</html>

@@ -1,0 +1,122 @@
+<section id="home-section">
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="/img/vacation2.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="/img/europe2.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="/img/vacation1.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+</section>
+
+<section id="properties-type">
+    <h1>see properties by type</h1>
+    <div id="properties">  
+        {{#each types}}
+            <div>
+                <img src="{{this.imgS}}">
+                <h2 class="description-content">{{this.Type}}</h2>
+            </div>
+        {{/each}}
+    </div>
+</section>
+
+<section id="properties-location">
+    <h1>see properties by location</h1>
+    <div id="properties">  
+        {{#each locations}}
+            <div>
+                <img src="{{this.imgS}}">
+                <h2 class="description-content">{{this.location}}</h2>
+            </div>
+        {{/each}}
+    </div>
+</section>
+
+<section id="content">
+    <h1>discover more</h1>
+    <p>unique activites with local experts</p>
+    <div id="articles1">
+        <div>
+            <img src="/img/travel1.jpg">
+            <p>Persephone is now in Paris... see the best local hotspots!</p><br>
+        </div>
+        <div>
+            <img src="/img/travel2.jpg">
+            <p>Old-school maps are finding new life in Polynesian backpacking</p><br>
+        </div>
+    </div>
+    <div id="articles2">
+        <div>
+            <img src="/img/travel3.jpg">
+            <p>Plane tour!</p><br>
+        </div>
+        <div>
+            <img src="/img/travel4.jpg">
+            <p>7 wonders of the world</p><br>
+        </div>
+        <div>
+            <img src="/img/travel5.jpg">
+            <p>Post-COVID bucketlist for all adventurers</p><br>
+        </div>
+    </div>
+</section>
+
+
